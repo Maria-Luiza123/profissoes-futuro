@@ -584,109 +584,108 @@
       Contact Section
     ============================-->
     <section id="contact" class="section-bg wow fadeInUp">
-      <div class="container">
+  <div class="container">
 
-        <div class="section-header">
-          <h3>Fale Conosco!</h3>
-          <p>Entre em contato!</p>
-        </div>
-
-        <div class="row contact-info">
-
-          <div class="col-md-4">
-            <div class="contact-address">
-              <i class="ion-ios-location-outline"></i>
-              <h3>Endereço</h3>
-              <address>Avenida Rebouças, 2.770 – Jardim Zilda Natel – Sumaré/SP </address>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-phone">
-              <i class="ion-ios-telephone-outline"></i>
-              <h3>Telefone</h3>
-              <p><a href="tel:+">(19) 9548-7771</a></p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="ion-ios-email-outline"></i>
-              <h3>Instagram</h3>
-              <p><a href="mailto:info@example.com">@ep-mtvcompani</a></p>
-            </div>
-          </div>
-
-        </div>
-        <script language="javascript" type="text/javascript">
-          function valida() { 
-          var nome = contato.nome.value;
-          var email = contato.email.value;
-          var nota = contato.nota.value;
-        
-          if (nome == "") {
-             alert('Por favor, Preencha o campo com seu nome!');
-             contato.nome.focus();
-          return false;
-          }
-    
-          if (email == "") {
-             alert('Preencha o campo com seu email');
-             contato.email.focus();
-          return false;
-          }
-    
-          if (nota == "") {
-            alert('Preencha o campo com a sua nota!');
-             contato.nota.focus();
-          return false;
-          }
-          
-          alert("Dados enviados com sucesso!");
-          contato.reset(); 
-    
-        }
-        </script> 
-            <div class="row g-5">
-                    <form name="contato" action="confirmacao.html" method="post">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <input name="nome" type="text" class="form-control border-0 bg-light px-4" required=" " placeholder="Seu nome" style="height: 55px;"><br>
-                            </div>
-                            <div class="col-md-6">
-                                <input name="email" type="email" class="form-control border-0 bg-light px-4" required=" " placeholder="Seu Email" style="height: 55px;"><br>
-                            </div>
-                            <div class="col-12">
-                             <select name="nota" class="form-control border-0 bg-light px-4" required="required" placeholder="Avalie nosso site!" style="height: 55px;">
-                                <option> Avalie nosso site!
-                                <option> 0
-                                <option> 1
-                                <option> 2
-                                <option> 3
-                                <option> 4
-                                <option> 5
-                                <option> 6
-                                <option> 7	
-                                <option> 8
-                                <option> 9
-                                <option> 10
-                                </select><br>
-                            </div>
-                            <div class="col-12">
-                                <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Mensagem"></textarea><br>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3"type="submit">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <div class="section-header">
+      <h3>Fale Conosco!</h3>
+      <p>Entre em contato!</p>
     </div>
-    <!-- Contact End -->
 
-  </main>
+    <div class="row contact-info">
+
+      <div class="col-md-4">
+        <div class="contact-address">
+          <i class="ion-ios-location-outline"></i>
+          <h3>Endereço</h3>
+          <address>Avenida Rebouças, 2.770 – Jardim Zilda Natel – Sumaré/SP </address>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="contact-phone">
+          <i class="ion-ios-telephone-outline"></i>
+          <h3>Telefone</h3>
+          <p><a href="tel:+">(19) 9548-7771</a></p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="contact-email">
+          <i class="ion-ios-email-outline"></i>
+          <h3>Instagram</h3>
+          <p><a href="mailto:info@example.com">@ep-mtvcompani</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <script language="javascript" type="text/javascript">
+      function valida() {
+        var nome = document.forms["contato"]["nome"].value;
+        var email = document.forms["contato"]["email"].value;
+        var nota = document.forms["contato"]["nota"].value;
+
+        if (nome == "") {
+          alert('Por favor, Preencha o campo com seu nome!');
+          document.forms["contato"]["nome"].focus();
+          return false;
+        }
+
+        if (email == "") {
+          alert('Preencha o campo com seu email');
+          document.forms["contato"]["email"].focus();
+          return false;
+        }
+
+        if (nota == "") {
+          alert('Preencha o campo com a sua nota!');
+          document.forms["contato"]["nota"].focus();
+          return false;
+        }
+
+        alert("Dados enviados com sucesso!");
+        document.forms["contato"].reset();
+        return false; // Para evitar o redirecionamento para outra página
+      }
+    </script>
+
+    <div class="row g-5">
+      <form name="contato" onsubmit="return valida()" method="post">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input name="nome" type="text" class="form-control border-0 bg-light px-4" placeholder="Seu nome" style="height: 55px;"><br>
+          </div>
+          <div class="col-md-6">
+            <input name="email" type="email" class="form-control border-0 bg-light px-4" placeholder="Seu Email" style="height: 55px;"><br>
+          </div>
+          <div class="col-12">
+            <select name="nota" class="form-control border-0 bg-light px-4" placeholder="Avalie nosso site!" style="height: 55px;">
+              <option value=""> Avalie nosso site!</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select><br>
+          </div>
+          <div class="col-12">
+            <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Mensagem"></textarea><br>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
 
   <!--==========================
     Footer
