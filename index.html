@@ -626,7 +626,7 @@
 
         </div>
             <div class="row g-5">
-                    <form name="contato" action="#" method="get">
+                    <form name="contato" action="confirmacao.html" method="post">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <input name="nome" type="text" class="form-control border-0 bg-light px-4" required=" " placeholder="Seu nome" style="height: 55px;"><br>
@@ -635,8 +635,8 @@
                                 <input name="email" type="email" class="form-control border-0 bg-light px-4" required=" " placeholder="Seu Email" style="height: 55px;"><br>
                             </div>
                             <div class="col-12">
-                             <select name="nota" class="form-control border-0 bg-light px-4" required=" " placeholder="Avalie nosso site!" style="height: 55px;">
-                                <option> Deixe uma nota!
+                             <select name="nota" class="form-control border-0 bg-light px-4" required="required" placeholder="Avalie nosso site!" style="height: 55px;">
+                                <option> Avalie nosso site!
                                 <option> 0
                                 <option> 1
                                 <option> 2
@@ -654,7 +654,7 @@
                                 <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Mensagem"></textarea><br>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" onclick="return valida()" type="submit">Enviar</button>
+                                <button class="btn btn-primary w-100 py-3"type="submit">Enviar</button>
                             </div>
                         </div>
                     </form>
