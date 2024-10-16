@@ -7,6 +7,19 @@
   <meta content="profissões, futuro, tecnologia" name="keywords">
   <meta content="Site para trabalho acadêmico sobre profissões do futuro" name="description">
   <meta content="Maria Luiza Mattos, Vitor Lopes, Thiago Pereira, Pedro Barbosa" name="author">
+  <script language="javascript" type="text/javascript">
+			function valida() { 
+			var nota = contato.nota.value;
+			if (nota == "") {
+				alert('Preencha o campo com a sua nota!');
+			   contato.nota.focus();
+			return false;
+			}
+			
+			alert("Dados enviados com sucesso!");
+			contato.reset(); 
+
+		}
 
   <!-- Favicons --> 
   <link rel="icon" type="image/jpg" href="img/pmtv.jpg">
@@ -627,7 +640,7 @@
 
         </div>
             <div class="row g-5">
-                    <form>
+                    <form name="contato" action="#" method="get">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <input type="text" class="form-control border-0 bg-light px-4" required=" " placeholder="Seu nome" style="height: 55px;"><br>
@@ -655,7 +668,7 @@
                                 <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Mensagem"></textarea><br>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
+                                <button class="btn btn-primary w-100 py-3" onclick="return valida()" type="submit">Enviar</button>
                             </div>
                         </div>
                     </form>
